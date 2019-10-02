@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+h2 ,h1{
+    text-align: center;
+}
+.pic{
+    text-align: center;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+            <h1> state for {{city}} weather</h1>
+            {% for icon in weather_icons %}
+          <div class="pic">
+              <img src="{{icon}}" alt="hi">
+          </div>
+
+            {% endfor %}
+            <h1> is {{weather_resulte.current.temperature}} degree</h1>
+
+    {% for item,value in weather_resulte.items  %}
+         <h2>{{item}}</h2>
+             <table>
+
+            {% for k,v in value.items %}
+                 <tr >
+                     <td >
+                         {{k}}
+                     </td>
+                      <td>
+                          {{v}}
+                     </td>
+                 </tr>
+
+            {% endfor %}
+</table>
+
+    {% endfor %}
+</body>
+</html>

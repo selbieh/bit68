@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "b9a83fbc-54d6-4330-9f9e-53c5ecd013e0",
+		"name": "bit68Test",
+		"description": "login end point takes {\"username\":\"the username\",\"password\":\"valid password\"}\nand returns {auth-token:\"token key\"}\nmethod is \"POST\"\nhttp://127.0.0.1:8000/auth/token/login/\n\n\ncreat user (register) endpoint takes {\"username\":\"the username\",\"password\":\"valid password\",\"email\":\"user email \"}\nand returns {\"id\":\"user id\",\"username\":\"username of created user\",\"email\":\"email of created user\"}\nmethod is \"POST\"\nhttp://127.0.0.1:8000/auth/users/\n\n\nget weather end point takes {\"city\":\"name of the requested city\"}\nand returns all the weather params in after consuming weatherstack.com api params\nhttp://127.0.0.1:8000/weather/\nmethod is \"POST\" to get resulte\nmethod \"GET\" will returns some helpe guidlines like {\n    \"helpe\": \"please use post include data like {'city':'cairo'} to get response wtih weather\"\n}\n\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test13",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdzxcqwe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/token/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"token",
+						"login",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "login end point takes {\"username\":\"the username\",\"password\":\"valid password\"} and returns {auth-token:\"token key\"} method is \"POST\" http://127.0.0.1:8000/auth/token/login/"
+			},
+			"response": [
+				{
+					"name": "LOGIN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test13",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asdzxcqwe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/token/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"token",
+								"login",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 02 Oct 2019 14:17:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.1rc1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"auth_token\": \"2b204e920e3feb91336a85bddce90be4740ba05a\"\n}"
+				}
+			]
+		},
+		{
+			"name": "register (creat user)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test17",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test16@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdzxcqwe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"users",
+						""
+					]
+				},
+				"description": "creat user (register) endpoint takes {\"username\":\"the username\",\"password\":\"valid password\",\"email\":\"user email \"} and returns {\"id\":\"user id\",\"username\":\"username of created user\",\"email\":\"email of created user\"} method is \"POST\" http://127.0.0.1:8000/auth/users/"
+			},
+			"response": [
+				{
+					"name": "register (creat user)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test18",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test18@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asdzxcqwe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 02 Oct 2019 14:16:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.1rc1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"test18@gmail.com\",\n    \"username\": \"test18\",\n    \"id\": 9\n}"
+				}
+			]
+		},
+		{
+			"name": "get weather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "city",
+							"value": "cairo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/weather/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"weather",
+						""
+					]
+				},
+				"description": "get weather end point takes {\"city\":\"name of the requested city\"} and returns all the weather params in after consuming weatherstack.com api params  method is \"POST\" to get resulte method \"GET\" will returns some helpe guidlines like { \"helpe\": \"please use post include data like {'city':'cairo'} to get response wtih weather\" }\r\n\r\nhttp://127.0.0.1:8000/weather/\r\n\r\n"
+			},
+			"response": [
+				{
+					"name": "get weather help with GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "cairo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/weather/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"weather",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 02 Oct 2019 14:21:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.1rc1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"helpe\": \"please use post include data like {'city':'cairo'} to get response wtih weather\"\n}"
+				},
+				{
+					"name": "get weather",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "cairo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/weather/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"weather",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 02 Oct 2019 14:15:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.1rc1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "680"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"weather for cairo\": {\n        \"request\": {\n            \"type\": \"City\",\n            \"query\": \"Cairo, Egypt\",\n            \"language\": \"en\",\n            \"unit\": \"m\"\n        },\n        \"location\": {\n            \"name\": \"Cairo\",\n            \"country\": \"Egypt\",\n            \"region\": \"Al Qahirah\",\n            \"lat\": \"30.050\",\n            \"lon\": \"31.250\",\n            \"timezone_id\": \"Africa/Cairo\",\n            \"localtime\": \"2019-10-02 16:12\",\n            \"localtime_epoch\": 1570032720,\n            \"utc_offset\": \"2.0\"\n        },\n        \"current\": {\n            \"observation_time\": \"02:12 PM\",\n            \"temperature\": 32,\n            \"weather_code\": 113,\n            \"weather_icons\": [\n                \"https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png\"\n            ],\n            \"weather_descriptions\": [\n                \"Sunny\"\n            ],\n            \"wind_speed\": 13,\n            \"wind_degree\": 320,\n            \"wind_dir\": \"NW\",\n            \"pressure\": 1012,\n            \"precip\": 0,\n            \"humidity\": 34,\n            \"cloudcover\": 0,\n            \"feelslike\": 32,\n            \"uv_index\": 8,\n            \"visibility\": 6,\n            \"is_day\": \"yes\"\n        }\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

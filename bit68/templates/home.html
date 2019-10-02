@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <p>hello {{user.username}}</p>
+    <a href="accounts/logout">logout</a>
+<br/>
+<br/>
+<br/>
+{% if error %}
+    <p>{{error}}</p>
+{% endif %}
+<form method="post" action="get_whether_in_template">
+    {% csrf_token %}
+    <input type="text" name="city" />
+        <button type="submit">GET WEATHER</button>
+
+</form>
+{% else %}
+<ul>
+    <li>
+            <a href="accounts/login">LOGIN</a>
+    </li>
+    <li>
+            <a href="accounts/register">REGISTER</a>
+    </li>
+    <h3>please login to get the weather now </h3>
+</ul>
+{% endif %}
+</body>
+</html>
